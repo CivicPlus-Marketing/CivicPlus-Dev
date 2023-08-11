@@ -1,0 +1,64 @@
+@import "variables";
+@import "utilits";
+
+/*Hero Section*/
+.hero-section {
+  @include archive-hero-section;
+}
+
+/*Archive Section*/
+.archive-section {
+  padding: 64px 0;
+
+  .container {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+  }
+
+  @include tax-nav;
+
+  @include archive-box;
+
+  @include post-card;
+
+  .post-card{
+    .row{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: -4px 0;
+    }
+
+    .subtitle{
+      @include p2;
+      margin: 0;
+      color: $color-lunar-black;
+    }
+  }
+
+  @include case-label;
+
+  .case-label{
+    color: $color-lunar-black;
+    font-size: 0.75rem;
+
+    &.product {
+      background: $color-middle-grey;
+      color: $color-lunar-black;
+
+      &:hover{
+        background: $color-middle-grey;
+        color: $color-lunar-black;
+      }
+    }
+
+    .population{
+      color: $color-lunar-black;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "variables";
+@import "utilits";
+
+/*Hero Section*/
+.hero-section {
+  padding: 164px 0 80px 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .container{
+    justify-content: center;
+  }
+}
+
+@include thank-you-box;

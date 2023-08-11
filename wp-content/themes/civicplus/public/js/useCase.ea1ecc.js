@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_roots_bud_sage_sage=self.webpackChunk_roots_bud_sage_sage||[]).push([[874],{"./styles/use-case.scss":()=>{}},s=>{var e=e=>s(s.s=e);s.O(0,[259,995],(()=>(e("./styles/use-case.scss"),e("./scripts/template-home.js"))));s.O()}]);

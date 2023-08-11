@@ -1,0 +1,254 @@
+@import "variables";
+@import "utilits";
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+}
+
+/*Content Section*/
+.content-section {
+  padding: 64px 0 100px 0;
+
+  .container {
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: 992px) {
+      flex-flow: column;
+    }
+  }
+
+  @include post-nav-box;
+
+  .content {
+    width: 1140px;
+
+    @media (max-width: 1600px) {
+      width: 940px;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+
+    & > div {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $color-lunar-gray;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        color: $color-pioneer-red;
+      }
+    }
+  }
+
+  .product {
+    padding: 38px 24px 24px;
+    background: $color-lunar-3;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      flex-flow: column;
+      align-items: flex-start;
+    }
+
+    h2 {
+      @include h4;
+
+      color: $color-lunar-black;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    img {
+      margin-right: 22px;
+      width: 64px;
+      height: auto;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+        margin-left: -15px;
+      }
+    }
+  }
+
+  .text {
+    margin-bottom: 8px;
+
+    h3, h4, h5 {
+      @include h5;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: #212223;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: $color-lunar-gray;
+    }
+  }
+
+  .cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 32px);
+    margin: 0 -16px 8px -16px;
+
+    .card {
+      @include icon-card($width: calc(33.333% - 32px));
+
+      padding: 24px 16px;
+      background: $color-white;
+
+      @media (max-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      img {
+        margin-bottom: 15px;
+
+        @media (max-width: 768px) {
+          width: 64px;
+          height: auto;
+          margin: 0;
+        }
+      }
+
+      h3.title {
+        @include h5;
+
+        margin-top: 0;
+        margin-bottom: 16px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 0;
+          width: calc(100% - 80px);
+        }
+      }
+
+      p {
+        color: $color-lunar-gray;
+        margin-bottom: 0;
+
+        @media (max-width: 768px) {
+          margin-top: 0;
+        }
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .quote-block {
+    background-color: $color-white;
+    padding: 34px 42px;
+
+    .quote {
+      position: relative;
+      margin-bottom: 16px;
+
+      p {
+        margin-top: 0;
+        @include p1;
+        color: $color-lunar-gray;
+      }
+
+      &:before {
+        content: url("../images/quote.svg");
+        position: absolute;
+        top: -5px;
+        left: -20px;
+      }
+
+      &:after {
+        content: url("../images/quote.svg");
+        position: absolute;
+        bottom: -2px;
+        right: -20px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .name {
+      @include p1;
+
+      font-weight: 500;
+      color: $color-lunar-black;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+
+    .position {
+      @include category;
+
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 6px;
+      color: $color-lunar-gray;
+    }
+  }
+
+  .cta-box {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background: #FF2731;
+    padding: 16px;
+    min-height: 79px;
+    margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      @include h5;
+      margin: 0;
+      color: $color-white;
+      width: calc(100% - 190px);
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+
+    .btn.secondary {
+      border-color: white;
+      color: $color-lunar-black;
+      background-color: $color-white;
+
+      &:hover {
+        background: $color-pioneer-red;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+/*Demo Section*/
+.demo-section {
+  @include demo-section;
+}

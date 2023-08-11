@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_roots_bud_sage_sage=self.webpackChunk_roots_bud_sage_sage||[]).push([[177],{"./styles/home.scss":()=>{}},s=>{var e=e=>s(s.s=e);s.O(0,[259,995],(()=>(e("./styles/home.scss"),e("./scripts/template-home.js"))));s.O()}]);

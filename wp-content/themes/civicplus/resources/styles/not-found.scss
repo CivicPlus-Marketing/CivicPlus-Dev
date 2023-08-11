@@ -1,0 +1,26 @@
+@import "variables";
+@import "utilits";
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+
+  margin-bottom: 26px;
+
+  .breadcrumbs {
+    margin-bottom: 90px;
+  }
+
+  .container {
+    align-items: flex-start;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/*Cards Icon Section*/
+.cards-icon-section {
+  @include cards-icon-section;
+}

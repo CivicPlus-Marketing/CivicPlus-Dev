@@ -1,0 +1,157 @@
+@import "variables";
+@import "utilits";
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+
+  min-height: 0;
+
+  padding: 180px 0 85px 0;
+
+  strong {
+    font-size: 2rem !important;
+    font-weight: 400;
+  }
+}
+
+/*Content Section*/
+.content-section {
+  padding: 64px 0;
+
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .left {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 200px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    a {
+      padding: 8px 12px;
+
+      width: 100%;
+
+      background: $color-lunar-3;
+
+      display: flex;
+      align-items: center;
+
+      font-family: $font-dm-sans;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 130%;
+
+      letter-spacing: -0.03em;
+      text-transform: capitalize;
+
+      color: $color-lunar-black;
+      text-decoration: none;
+
+      transition: 0.3s all ease-in;
+
+      &:hover, &.active {
+        background: $color-white;
+      }
+
+      span {
+        width: calc(100% - 32px);
+        padding-left: 8px;
+      }
+    }
+
+    img {
+      width: 32px;
+      height: auto;
+    }
+  }
+
+  .right {
+    width: calc(100% - 200px);
+    padding-left: 32px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    a {
+      color: $color-pioneer-red;
+      text-decoration: none;
+      transition: 0.3s all ease-in;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li{
+      display: list-item;
+    }
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  p, li, a {
+    @include p2;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 28px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc(100% - 450px);
+    padding-right: 32px;
+
+    @media (max-width: 1366px) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 32px;
+    }
+
+    * {
+      margin: 0;
+    }
+  }
+
+  @include form-box($max-width: 450px);
+
+  .form-box {
+    margin-bottom: 0;
+    width: 100%;
+    box-shadow: none;
+
+    border: 1px solid $color-middle-grey;
+
+    @media (max-width: 1366px) {
+      max-width: none;
+    }
+  }
+
+}

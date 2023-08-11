@@ -1,0 +1,137 @@
+@import "variables";
+@import "utilits";
+
+.main{
+  @include pagination;
+}
+
+/*Hero Section*/
+.hero-section {
+  @include archive-hero-section;
+}
+
+/*Archive Section*/
+.archive-section {
+  padding: 64px 0;
+
+  .container {
+    flex-direction: column;
+  }
+
+  .types-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $color-middle-grey;
+  }
+
+  .types-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 30px 16px 30px;
+
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+
+    color: $color-lunar-black;
+    text-decoration: none;
+
+    border-bottom: 1px solid transparent;
+    margin-bottom: -1px;
+
+    &:hover, &.active {
+      color: $color-pioneer-red;
+      border-bottom: 1px solid $color-pioneer-red;
+    }
+
+    &.blog {
+      &:before {
+        content: url('../images/blog.svg');
+      }
+    }
+
+    &.brochures {
+      &:before {
+        content: url('../images/brochure.svg');
+      }
+    }
+
+    &.white-papers {
+      &:before {
+        content: url('../images/white-paper.svg');
+      }
+    }
+
+    &.webinars {
+      &:before {
+        content: url('../images/webinar.svg');
+      }
+    }
+
+    &.ebooks {
+      &:before {
+        content: url('../images/ebook.svg');
+      }
+    }
+
+    &.fact-sheets {
+      &:before {
+        content: url('../images/fact-sheet.svg');
+      }
+    }
+
+    &.tool-kit {
+      &:before {
+        content: url('../images/tool-kit.svg');
+      }
+    }
+
+    &.infographic {
+      &:before {
+        content: url('../images/infographic.svg');
+      }
+    }
+
+    &.videos {
+      &:before {
+        content: url('../images/video.svg');
+      }
+    }
+  }
+
+
+  .content {
+    width: 100%;
+    display: flex;
+
+    padding-top: 64px;
+  }
+
+  @include tax-nav;
+
+  @include archive-box;
+
+  @include post-card;
+
+  .post-card:first-child {
+    width: calc(100% - 32px);
+    flex-direction: row;
+
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    .bottom {
+      width: 50%;
+      justify-content: center;
+    }
+  }
+}

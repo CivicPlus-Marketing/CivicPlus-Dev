@@ -1,0 +1,25 @@
+@import "variables";
+@import "utilits";
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+}
+
+/*Products Section*/
+.products-section {
+  @include products-section(false);
+}
+
+/*Tabs Resources Section*/
+.tabs-resources-section{
+  @include tabs-resources-section;
+}
+
+/*Demo Section*/
+.demo-section {
+  @include demo-section;
+
+  margin-top: 50px;
+}

@@ -1,0 +1,210 @@
+@import "variables";
+@import "utilits";
+
+main {
+  @include breadcrumbs;
+}
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+
+  padding-bottom: 98px;
+
+  .breadcrumbs{
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  }
+
+  .left {
+    width: 408px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    & > * {
+      margin: 0;
+    }
+
+    @media (max-width: 992px) {
+      margin-bottom: 50px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    p {
+      color: $color-middle-grey;
+    }
+  }
+
+  .right {
+    width: calc(100% - 408px);
+    padding-left: 32px;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  @include form-box($max-width: 700px);
+
+  .form-box {
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .tabs-box {
+    background: #FFFFFF;
+    box-shadow: 0px -4px 95px rgba(0, 0, 0, 0.15);
+    padding: 32px;
+    border-radius: 4px;
+  }
+
+  .tabs-nav {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    border-bottom: 1px solid $color-middle-grey;
+
+    .left {
+      display: flex;
+    }
+
+    @media (max-width: 568px) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  .tab-nav-item {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+
+    color: $color-lunar-black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 40px;
+    height: 49px;
+
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    margin-bottom: -1px;
+    cursor: pointer;
+
+
+    @media (max-width: 768px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    @media (max-width: 568px) {
+      flex-shrink: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &.active {
+      color: $color-pioneer-red;
+      border-bottom: 1px solid $color-pioneer-red;
+
+    }
+
+    &:hover{
+      border-bottom: 1px solid $color-pioneer-red;
+    }
+  }
+
+
+  .tabs-content {
+    width: 100%;
+    margin: 24px 0 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tabs-body {
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &.active {
+      display: flex;
+    }
+
+    .left {
+      width: calc(50% - 20px);
+      padding: 32px 0 32px 32px;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      height: fit-content;
+
+      @media (max-width: 568px) {
+        width: 100%;
+      }
+    }
+
+    .right {
+      width: calc(50% - 20px);
+
+      @media (max-width: 568px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .box{
+    /* Lunar 3 */
+
+    background: $color-lunar-3;
+    border-radius: 4px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin-bottom: 24px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    p{
+      @include p2;
+
+      color: $color-lunar-black;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import "variables";
+@import "utilits";
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+main {
+  @include breadcrumbs;
+}
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+  position: relative;
+
+  min-height: 0;
+  padding: 170px 0 40px 0;
+}
+
+/*Content Box*/
+.content-box {
+  padding: 64px 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 64px;
+
+  position: relative;
+
+  @include post-nav-box;
+
+  .post-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    padding: 50px 0;
+
+    @media (max-width: 1560px) {
+      display: none;
+    }
+  }
+}
+
+/*Awards Section*/
+.awards-section {
+  .container {
+    flex-direction: column;
+  }
+
+  h2 {
+    @include h4;
+    margin: 0;
+
+    span {
+      @include h2;
+      color: $color-pioneer-red;
+    }
+  }
+
+  .list {
+    width: calc(100% + 32px);
+    margin: 0 -16px -16px -16px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include post-card();
+
+  .award-card {
+    .learn-more {
+      align-items: center;
+
+      &:after {
+        content: "\e909";
+        margin-left: 5px;
+        font-size: 16px;
+      }
+    }
+
+    p:not(.case-label){
+      margin: 0;
+      color: $color-lunar-gray;
+    }
+  }
+
+  @include case-label;
+
+  .case-label{
+    color: $color-lunar-black;
+  }
+}
+
+/*Content Section*/
+.content-section {
+  .container {
+    flex-direction: column;
+    gap: 16px;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  @include page-copy;
+}
+
+/*Tour Section*/
+.tour-section {
+  @include tour-section();
+
+  padding: 0;
+}
+
+/*Demo Section*/
+.demo-section {
+  @include demo-form-section;
+}

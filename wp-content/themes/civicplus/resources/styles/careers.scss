@@ -1,0 +1,67 @@
+@import "variables";
+@import "utilits";
+
+main {
+  @include breadcrumbs;
+}
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+
+  margin-bottom: 64px;
+
+  .breadcrumbs {
+    margin-bottom: 90px;
+  }
+
+  .container {
+    align-items: flex-start;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/*Image text Section*/
+.image-text-section {
+  @include image-text-section;
+}
+
+/*Cards Section*/
+.cards-section {
+  padding: 24px 0;
+
+  .container {
+    flex-direction: column;
+    gap: 16px;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 32px);
+    margin: -16px;
+  }
+
+  .card {
+    @include image-card(calc(33.3333% - 32px));
+
+    @media (max-width: 1180px) {
+      width: calc(50% - 32px);
+    }
+
+    @media (max-width: 568px) {
+      width: calc(100% - 32px);
+    }
+  }
+}
+
+/*Demo Section*/
+.demo-section {
+  @include demo-section;
+}

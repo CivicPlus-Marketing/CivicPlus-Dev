@@ -1,0 +1,284 @@
+@import "variables";
+@import "utilits";
+
+main {
+  @include breadcrumbs;
+}
+
+/*Hero Section*/
+.hero-section {
+  padding: 164px 0 220px 0;
+  margin-bottom: 64px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 992px) {
+    padding: 164px 0 80px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 90px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  h1 {
+    max-width: 601px;
+    margin: 0;
+
+    span {
+      color: #EF7087;
+      padding-top: 15px;
+    }
+  }
+}
+
+/*Content Section*/
+.content-section {
+  padding: 32px 0;
+
+  .container {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .content {
+    width: calc(100% - 282px);
+    display: flex;
+    flex-direction: column;
+
+    gap: 32px;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+
+    * {
+      margin: 0;
+    }
+  }
+
+  .content-box, .text-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+  }
+
+  p, li {
+    @include p2;
+
+    color: $color-lunar-gray;
+  }
+
+  a:not(.btn-red) {
+    color: $color-pioneer-1;
+
+    &:hover {
+      color: $color-pioneer-red;
+    }
+  }
+
+  pre {
+    @include p1;
+    white-space: pre-line;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-list {
+    @include faq;
+
+    .answer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      h2, h3, h4, h5 {
+        margin-top: 16px;
+      }
+
+      h4 {
+        @include h4;
+      }
+    }
+  }
+
+  .sidebar {
+    width: 250px;
+    height: 100%;
+
+    position: relative;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      height: auto;
+    }
+
+    .sticky-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      position: sticky;
+      top: 100px;
+
+      @media (max-width: 992px) {
+        position: static;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      & > .title {
+        padding: 0 16px;
+      }
+    }
+
+    .title {
+      @include h5;
+
+      color: #212223;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      margin-top: 16px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 0 16px;
+
+      p {
+        color: $color-lunar-gray;
+      }
+    }
+
+    a:not(.btn-red) {
+      text-decoration: none;
+
+      position: relative;
+
+      &[target="_blank"] {
+        &:before {
+          font-family: 'icomoon' !important;
+          content: "\e909";
+
+          position: absolute;
+          top: 3px;
+          left: -20px;
+
+          color: $color-lunar-black;
+        }
+      }
+    }
+
+    .cta-box {
+      padding: 16px;
+      margin-top: 16px;
+
+      border-radius: 4px;
+      border: 1px solid $color-middle-grey;
+      background: $color-white;
+
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .btn-red {
+        margin-top: 8px;
+      }
+    }
+
+    .btn-red {
+      padding: 0 22px;
+    }
+  }
+}
+
+/*Image text Section*/
+.image-text-section {
+  @include image-text-section;
+
+  .container{
+    flex-wrap: wrap;
+  }
+
+  .left {
+    justify-content: center;
+  }
+
+  .box{
+    width: 100%;
+    padding: 24px;
+    border-radius: 4px;
+    border: 1px solid $color-middle-grey;
+
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: 992px) {
+      order: 3;
+      margin-top: 0;
+    }
+
+    *{
+      margin: 0;
+    }
+
+    h3, h4, h5{
+      @include h5;
+    }
+  }
+
+  a:not(.btn-red) {
+    color: $color-pioneer-1;
+
+    position: relative;
+    text-decoration: none;
+
+    &[target="_blank"] {
+      &:before {
+        font-family: 'icomoon' !important;
+        content: "\e909";
+
+        color: $color-lunar-black;
+        margin-right: 8px;
+        font-size: 14px;
+      }
+    }
+
+    &:hover {
+      color: $color-pioneer-red;
+    }
+  }
+}
+
+/*Demo Section*/
+.demo-section {
+  @include demo-image-section;
+
+  margin-top: 50px;
+}

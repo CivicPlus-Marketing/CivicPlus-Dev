@@ -1,0 +1,276 @@
+@import "variables";
+@import "utilits";
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+main {
+  @include breadcrumbs;
+}
+
+/*Hero Section*/
+.hero-section {
+  padding: 130px 0 30px 0;
+  min-height: 640px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    min-height: 0;
+    padding: 130px 0 50px 0;
+
+    background-position: 60% 60%;
+  }
+
+  .container {
+    align-items: flex-start;
+  }
+
+  .content {
+    max-width: 640px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding-top: 40px;
+
+    & > * {
+      margin: 0;
+    }
+
+    .breadcrumbs {
+      margin-bottom: 75px;
+    }
+
+    h2 {
+      @include h5;
+      color: $color-lunar-3;
+    }
+  }
+
+  p {
+    @include p1;
+    color: $color-lunar-3;
+    max-width: 600px;
+
+    @media (max-width: 568px) {
+      font-size: 1rem;
+    }
+  }
+
+  .columns {
+    width: 100%;
+    display: flex;
+    margin-top: 48px;
+
+    @media (max-width: 568px) {
+      margin-top: 24px;
+    }
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 48px;
+    border-right: 1px solid $color-lunar-3;
+
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
+
+    @media (max-width: 568px) {
+      padding: 0 12px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    p {
+      margin: 0;
+      color: $color-lunar-3;
+
+      font-size: 1rem;
+    }
+
+    .title {
+      font-family: $font-dm-sans;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 190%;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.history-slider {
+  width: 100%;
+  margin-bottom: 58px;
+
+  img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+}
+
+/*Image text Section*/
+.image-text-section {
+  @include image-text-section;
+
+  padding: 26px 0;
+}
+
+/*History Section*/
+.history-section {
+  padding: 48px 0 128px 0;
+  display: flex;
+  justify-content: center;
+
+  .container{
+    justify-content: center;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    max-width: 998px;
+    width: 100%;
+  }
+
+  .date-box{
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 568px) {
+      flex-direction: column;
+    }
+
+    &:first-child{
+
+      .right:before{
+        top: -14px;
+      }
+    }
+
+    &:last-child{
+      .right:after{
+        width: 131px;
+        height: 75px;
+
+        background-image: url("../images/history-middle.svg");
+        background-size: contain;
+
+        content: '';
+
+        display: block;
+
+        position: absolute;
+        left: -65px;
+        bottom: -79px;
+      }
+    }
+  }
+
+  .left{
+    width: calc(100% - 634px);
+    padding-right: 64px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 992px) {
+      width: calc(100% - 500px);
+    }
+
+    @media (max-width: 768px) {
+      width: calc(100% - 350px);
+    }
+
+    @media (max-width: 568px) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 32px;
+      margin-bottom: -50px;
+      justify-content: flex-start;
+    }
+
+    p{
+      @include h1;
+      margin: 0;
+    }
+  }
+
+  .right{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    width: 634px;
+
+    padding-left: 64px;
+
+    padding-bottom: 48px;
+
+    border-left: 1px solid $color-pioneer-red;
+
+    position: relative;
+
+    @media (max-width: 992px) {
+      width: 500px;
+    }
+
+    @media (max-width: 768px) {
+      width: 350px;
+    }
+
+    @media (max-width: 568px) {
+      width: 100%;
+      padding-left: 32px;
+
+      padding-top: 62px;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+
+      width: 36px;
+      height: 36px;
+
+      background-image: url("../images/history-circle.svg");
+      background-size: contain;
+      display: block;
+
+      top: 10px;
+      left: -18px;
+    }
+
+    img{
+      max-width: 400px;
+      //width: 100%;
+      height: auto;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+    *{
+      margin: 0;
+    }
+
+    p{
+      color: $color-lunar-gray;
+    }
+  }
+}

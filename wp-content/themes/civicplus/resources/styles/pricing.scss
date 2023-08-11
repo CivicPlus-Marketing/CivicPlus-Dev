@@ -1,0 +1,49 @@
+@import "variables";
+@import "utilits";
+
+/*Hero Section*/
+.hero-section {
+  @include hero-section;
+
+  padding-bottom: 98px;
+
+  .container {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  }
+
+  .left {
+    width: 408px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    & > * {
+      margin: 0;
+    }
+
+    @media (max-width: 992px) {
+      margin-bottom: 50px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+  }
+
+  .right {
+    width: calc(100% - 408px);
+    padding-left: 32px;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  @include form-box($max-width: 700px);
+
+  .form-box {
+    margin-bottom: 0;
+  }
+}

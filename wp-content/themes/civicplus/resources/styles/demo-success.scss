@@ -1,0 +1,149 @@
+@import "variables";
+@import "utilits";
+
+main {
+  @include breadcrumbs;
+}
+
+/*Hero Section*/
+.hero-section {
+  background-position: center;
+  background-size: cover;
+  min-height: 0;
+
+  padding: 164px 0 75px 0;
+
+  .container {
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+
+    margin-top: 50px;
+  }
+
+  .label {
+    @include learn-more;
+    color: $color-pioneer-red;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  strong {
+    font-size: 2rem !important;
+    font-weight: 400;
+  }
+}
+
+/*Content Section*/
+.content-section {
+  padding: 64px 0;
+
+  .container {
+    flex-wrap: wrap;
+  }
+  .tabs-box{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .left {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 200px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      @include h5;
+      margin: 0 0 10px 0;
+    }
+
+    button {
+      font-family: $font-dm-sans;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+
+      color: $color-lunar-black;
+
+      padding: 10px 0;
+
+      text-align: left;
+      background: none;
+      border: none;
+
+      transition: 0.3s all ease-in;
+
+      cursor: pointer;
+
+      &:hover, &.active {
+        color: $color-pioneer-red
+      }
+    }
+
+  }
+
+  .right {
+    width: calc(100% - 200px);
+    padding-left: 32px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+  }
+
+  .tabs-body{
+    display: none;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+
+    &.active{
+      display: flex;
+    }
+  }
+
+  @include wistia-video;
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+  }
+  h2{
+    @include h4;
+    margin: 0;
+  }
+  p, li, a:not(.btn-red) {
+    @include p2;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 28px;
+  }
+}

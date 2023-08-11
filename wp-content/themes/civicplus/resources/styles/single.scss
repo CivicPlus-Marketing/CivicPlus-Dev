@@ -1,0 +1,180 @@
+@import "variables";
+@import "utilits";
+
+main {
+  @include author-box;
+
+  @include breadcrumbs;
+
+  @include share-box;
+}
+
+/*Hero-section*/
+.hero-section {
+  @include post-hero-section;
+}
+
+/*Content*/
+.content-section {
+  padding: 64px 0 60px 0;
+
+  .container {
+    justify-content: center;
+    position: relative;
+  }
+
+  @include post-nav-box;
+
+  @include post-content;
+}
+
+.author-section {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .container {
+    justify-content: center;
+  }
+
+  .content {
+    max-width: 944px;
+    width: 100%;
+  }
+
+  h3 {
+    margin: 0 0 24px 0;
+
+    @include h4;
+  }
+
+  .author-box {
+    align-items: flex-start;
+
+    .name {
+      color: $color-lunar-black
+    }
+
+    p {
+      color: $color-lunar-gray
+    }
+
+    .linkedin {
+      background-color: $color-lunar-black;
+
+      &:before {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.near-post-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0 60px 0;
+
+  .container {
+    justify-content: center;
+  }
+
+  .content {
+    max-width: 944px;
+    width: 100%;
+  }
+
+  .next-prev-buttons {
+    display: flex;
+    gap: 32px;
+
+    @media (max-width: 768px) {
+      flex-flow: column;
+    }
+  }
+
+  .previous-button, .next-button {
+    width: calc(50% - 16px);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .next-button a {
+    align-items: flex-end;
+  }
+
+  a {
+    width: 100%;
+    padding: 24px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #F4F4F4;
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    & > * {
+      margin: 0;
+    }
+
+    p {
+      font-family: $font-dm-sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 115%;
+
+      letter-spacing: -0.05em;
+
+      color: #212223;
+    }
+
+    & > span {
+      font-family: $font-inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1rem;
+
+      text-transform: uppercase;
+
+      color: $color-pioneer-red;
+    }
+  }
+}
+
+/*FAQs Section*/
+.faqs-section {
+  @include faqs-section;
+
+  .container {
+    align-items: center;
+  }
+
+  h2 {
+    @include h4;
+  }
+
+  .faqs-box, h2 {
+    max-width: 944px;
+    width: 100%;
+  }
+}
+
+/*Related Section*/
+.related-section {
+  @include related-section;
+}
+
+/*Demo Section*/
+.demo-section {
+  @include demo-section;
+
+  margin-top: 50px;
+}

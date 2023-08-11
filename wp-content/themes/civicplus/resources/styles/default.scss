@@ -1,0 +1,36 @@
+@import "variables";
+@import "utilits";
+
+/*Cont5ent Section*/
+.content-section{
+  padding: 148px 0 48px 0;
+
+  display: flex;
+  justify-content: center;
+
+  .content{
+    max-width: 900px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include page-copy;
+
+    *{
+      margin: 0;
+    }
+
+    h1, h2, h3, h4{
+      margin-bottom: -16px;
+
+      color: $color-lunar-black;
+    }
+
+    img, iframe{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
